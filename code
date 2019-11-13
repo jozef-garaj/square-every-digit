@@ -1,0 +1,24 @@
+function squareDigits(num){
+  
+      var arr;
+	var arr = num.toString(10).replace(/\D/g, '0').split('').map(Number);
+
+		var numbers2 = arr.map(myFunction);
+
+
+	function myFunction(value, index, array) {
+		return Math.pow(value, 2);
+	}
+
+	var txt = '';
+	numbers2.forEach(myFunction2);
+
+	function myFunction2(value, index, array) {
+		txt = txt + value;
+    
+	}
+  //console.log(numbers2);
+  
+  var final = Number(txt);
+  return final;
+}
